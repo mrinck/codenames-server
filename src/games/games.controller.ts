@@ -2,7 +2,7 @@ import { Controller, Get, Param, Post } from '@nestjs/common';
 import { Game } from '../interfaces/game';
 import { GamesService } from './games.service';
 
-@Controller('api/game')
+@Controller('game')
 export class GamesController {
 
     constructor(private gamesService: GamesService) {}
