@@ -3,7 +3,7 @@ import { Subject } from "rxjs";
 import { Player } from "../interfaces/player";
 import { Server } from "socket.io";
 
-@WebSocketGateway(8088)
+@WebSocketGateway(8089)
 export class EventsGateway implements OnGatewayDisconnect {
     @WebSocketServer() server: Server;
 
