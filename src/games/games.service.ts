@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Game } from 'src/interfaces/game';
+import { Game } from '../interfaces/game';
 import { wordlist } from './wordlist';
 import { v4 as uuidv4 } from 'uuid';
 import { EventsGateway } from './events.gateway';

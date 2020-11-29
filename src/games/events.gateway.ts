@@ -1,9 +1,9 @@
 import { OnGatewayDisconnect, SubscribeMessage, WebSocketGateway, WebSocketServer, } from "@nestjs/websockets";
 import { Subject } from "rxjs";
-import { Player } from "src/interfaces/player";
+import { Player } from "../interfaces/player";
 import { Server } from "socket.io";
 
-@WebSocketGateway(8080)
+@WebSocketGateway(8088)
 export class EventsGateway implements OnGatewayDisconnect {
     @WebSocketServer() server: Server;
 
