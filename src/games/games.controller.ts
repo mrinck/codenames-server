@@ -25,3 +25,4 @@ export class GamesController {
         return this.gamesService.getIdentities(params.gameId);
     }
 }
+
