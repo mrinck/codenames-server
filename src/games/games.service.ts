@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Game } from '../interfaces/game';
 import { wordlist } from './wordlist';
-import { v4 as uuidv4 } from 'uuid';
 import { EventsGateway } from './events.gateway';
 
 @Injectable()
@@ -34,7 +33,7 @@ export class GamesService {
     }
 
     createGame(): string {
-        const uuid = uuidv4();
+        const uuid = this.generateID();
         const now = Date.now();
 
         const game: Game = {
@@ -131,5 +130,16 @@ export class GamesService {
             [a[i], a[j]] = [a[j], a[i]];
         }
         return a;
+    }
+
+    private generateID(length = 5): string {
+        const id: string[] = [];
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
+        for (let i = 0; i < length; i++) {
+            const index = Math.floor(Math.random() * chars.length);
+            const char = chars[index];
+            id.push(char);
+        }
+        return id.join('');
     }
 }
