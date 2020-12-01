@@ -134,7 +134,7 @@ export class GamesService {
 
     private generateID(length = 6): string {
         const id: string[] = [];
-        const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ123456789";
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (let i = 0; i < length; i++) {
             const index = Math.floor(Math.random() * chars.length);
             const char = chars[index];
